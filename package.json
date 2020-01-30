@@ -1,0 +1,23 @@
+{
+  "name": "webv2",
+  "version": "1.0.0",
+  "description": "dockerized webserver",
+  "main": "index.js",
+  "scripts": {
+    "test": "PORT=3000 node index.js",
+    "start": "PORT=80 node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coryo12345/WebV2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coryo12345/WebV2/issues"
+  },
+  "homepage": "https://github.com/coryo12345/WebV2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
