@@ -6,17 +6,20 @@ body {
 }
 
 .titlebar {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     width: 100vw;
-    color: #888888;
+    color: #5f5f5f;
+}
+
+.titlebar a {
+    color: inherit;
 }
 
 .titlebar h1 {
-    margin: 0;
+    margin: 10px 50px;
     text-transform: capitalize;
     display: inline-block;
     font-weight: bolder;
-    margin-left: 50px;
 }
 
 .hero {
@@ -24,37 +27,70 @@ body {
     height: auto;
     position: relative;
     display: block;
+    margin-bottom: 2rem;
 }
 
 .hero img {
     width: 100vw;
     position: relative;
-    /* height: 420px; */
 }
 
-.hero p {
+.hero-text {
     position: absolute;
-    width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
+    top:0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.hero-text p {
+    margin: auto;
     text-align: center;
     color: #fff;
-    top: 0;
-    left: 0;
-    line-height: 100%;
+    vertical-align: middle;
     font-size: 3rem;
-    margin: 0;
     font-weight: bolder;
 }
 
 #main {
     background: #fff;
-    color: #444444;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .content {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.content a {
+    color: #748BF7;
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: #3f5dcf
+}
+
+li {
+    line-height: 1.7em;
+}
+
+h2 {
+    font-weight: lighter;
+    font-size: 1.7rem;
+}
+
+p {
+    color: #6b6b6b;
+    line-height: 1.4em;
+    font-size: .95em;
+}
+
+footer {
+    margin-top: 50px;
+    min-height: 50px;
+    width: 100vw;
+    background-color: rgb(45,45,45);
 }
