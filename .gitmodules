@@ -1,6 +1,6 @@
-[submodule "submodules/bashio-terminal"]
-	path = submodules/bashio-terminal
-	url = https://github.com/coryo12345/bashio-terminal
-[submodule "submodules/clock"]
-	path = submodules/clock
+[submodule "assets/clock"]
+	path = assets/clock
 	url = https://github.com/coryo12345/clock
+[submodule "assets/bashio-terminal"]
+	path = assets/bashio-terminal
+	url = https://github.com/coryo12345/bashio-terminal
