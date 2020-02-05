@@ -11,6 +11,14 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve('./pages/index.html'));
 });
 
+app.get('/clock', (req, res) => {
+    res.sendFile(path.resolve('./pages/clock.html'))
+});
+
+app.get('/terminal', (req, res) => {
+    res.sendFile(path.resolve('./pages/terminal.html'))
+});
+
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
 
 function coalesce() {
