@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve('./pages/index.html'));
 });
 
+app.get('/app-ads.txt', (req, res) => {
+    res.sendFile(path.resolve('./google/app-ads.txt'));
+});
+
 app.get('/clock', (req, res) => {
     res.sendFile(path.resolve('./pages/clock.html'))
 });
