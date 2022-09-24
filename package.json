@@ -4,7 +4,7 @@
   "description": "dockerized webserver",
   "main": "index.js",
   "scripts": {
-    "test": "PORT=3000 node index.js",
+    "dev": "PORT=3000 node index.js",
     "start": "PORT=80 node index.js"
   },
   "repository": {
