@@ -20,7 +20,7 @@ pipeline {
                 sh 'docker rm webv2 || true'
                 sh 'docker run -d --name webv2 \
                     --restart always \
-                    --network=webnetwork
+                    --network=webnetwork \
                     webv2:latest'
             }
         }
