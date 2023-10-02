@@ -1,23 +1,14 @@
 {
-  "name": "webv2",
-  "version": "1.0.0",
-  "description": "dockerized webserver",
-  "main": "index.js",
+  "name": "webv2-2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "PORT=3000 node index.js",
-    "start": "PORT=80 node index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coryo12345/WebV2.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/coryo12345/WebV2/issues"
-  },
-  "homepage": "https://github.com/coryo12345/WebV2#readme",
-  "dependencies": {
-    "express": "^4.17.1"
+  "devDependencies": {
+    "vite": "^4.3.9"
   }
 }
