@@ -15,143 +15,166 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
+    <div class="noise"></div>
+    <div class="gradient-overlay"></div>
+    
     <header class="titlebar">
-      <a href="/">
+      <a href="/" class="logo-link">
         <h1>CORY DIOGUARDI</h1>
+        <div class="logo-glow"></div>
       </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
+
     <section class="hero">
-      <img src="/astronomy-dark.jpg" alt="background-picture" />
-      <div class="hero-text">
-        <p>Software Engineer & Frontend Developer</p>
+      <div class="hero-background">
+        <img src="/astronomy-dark.jpg" alt="background-picture" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2 class="glitch-text">Software Engineer</h2>
+          <p class="typewriter">Frontend Developer & Creative Coder</p>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrow"></div>
+        </div>
       </div>
     </section>
+
     <main id="main">
       <article class="content">
-        <section class="about-me">
-          <h2>About Me</h2>
-          <p>
-            Hi, I'm a software engineer who loves turning ideas into intuitive,
-            user-friendly web applications. Bringing a product to life—from
-            concept to polished experience—is what excites me most.
-          </p>
-          <p>
-            I specialize in frontend development, crafting sleek and responsive
-            interfaces with TypeScript, Vue, and React. While UI/UX is my main
-            focus, I enjoy exploring the full stack to build seamless,
-            well-rounded applications.
-          </p>
-          <p>
-            I graduated from Rochester Institute of Technology in May 2021 with
-            a B.S. in Computer Science. Always eager to learn and grow, I'm open
-            to new opportunities that push my skills and expand my horizons.
-          </p>
-          <p>Check out my projects and feel free to reach out!</p>
+        <section id="about" class="about-me">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p class="reveal-text">
+                Hi, I'm a software engineer who loves turning ideas into intuitive,
+                user-friendly web applications. Bringing a product to life—from
+                concept to polished experience—is what excites me most.
+              </p>
+              <p class="reveal-text">
+                I specialize in frontend development, crafting sleek and responsive
+                interfaces with TypeScript, Vue, and React. While UI/UX is my main
+                focus, I enjoy exploring the full stack to build seamless,
+                well-rounded applications.
+              </p>
+              <p class="reveal-text">
+                I graduated from Rochester Institute of Technology in May 2021 with
+                a B.S. in Computer Science. Always eager to learn and grow, I'm open
+                to new opportunities that push my skills and expand my horizons.
+              </p>
+              <p class="reveal-text">Check out my projects and feel free to reach out!</p>
+            </div>
+            <div class="tech-stack">
+              <div class="tech-item">TypeScript</div>
+              <div class="tech-item">Vue</div>
+              <div class="tech-item">Vuetify</div>
+              <div class="tech-item">React</div>
+              <div class="tech-item">Go</div>
+              <div class="tech-item">PHP</div>
+            </div>
+          </div>
         </section>
-        <h2>Important Links</h2>
-        <p>Email: <a href="mailto:cory@corydio.com">cory@corydio.com</a></p>
-        <p>
-          Github:
-          <a
-            rel="noreferrer noopener"
-            aria-label="(opens in a new tab)"
-            href="https://github.com/coryo12345"
-            target="_blank"
-          >
-            github.com/coryo12345
-          </a>
-        </p>
-        <p>
-          Resume:
-          <a
-            href="/Resume-Cory-DioGuardi.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Opens in new tab
-          </a>
-        </p>
-        <h2>Projects to check out on GitHub</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/coryo12345/carapi">Car API</a> (check it
-            out <a href="https://car.dioapi.com/">here</a>!) - A public API that
-            returns information about various vehicle makes & models. API is
-            written in Go, and UI was created with Astro & React. The site
-            linked has more information about the technologies used, as well as
-            examples of the API usage.
-          </li>
-          <li>
-            <a href="https://github.com/coryo12345/ReactKanbanBoard">
-              Kanban Board
+
+        <section id="contact" class="contact-section">
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="contact-links">
+            <a href="mailto:cory@corydio.com" class="contact-item">
+              <span class="icon">✉️</span>
+              <span>cory@corydio.com</span>
             </a>
-            - A desktop app built using Wails (a framework for building desktop
-            apps with web technologies and Go). It allows for customizable
-            columns, with custom drag and drop functionality I made.
-          </li>
-          <li>
-            <a href="https://github.com/coryo12345/DioAnalytics">
-              Discord Time Analytics
+            <a href="https://github.com/coryo12345" class="contact-item" target="_blank" rel="noopener noreferrer">
+              <span class="icon">🐙</span>
+              <span>github.com/coryo12345</span>
             </a>
-            - An application that recorded time users spent in voice channels on
-            Discord servers. Data was stored in a SQLite DB and displayed in a
-            UI built with Astro and Vue. Data was displayed in line charts to
-            show change in data over time.
-          </li>
-          <li>
-            <a href="https://github.com/coryo12345/DiscGolfShuffle">
-              DiscGolfShuffle Mobile App
+            <a href="/Resume-Cory-DioGuardi.pdf" class="contact-item" target="_blank" rel="noopener noreferrer">
+              <span class="icon">📄</span>
+              <span>Resume</span>
             </a>
-            - A mobile app for IOS and Android written in React Native. Designed
-            for casual play in groups, to mix up a normal round with some fun
-            twists.
-          </li>
-        </ul>
-        <h2>Things you can check out live!</h2>
-        <ul>
-          <li>
-            <a href="https://canvas.corydio.com">Magic Canvas</a> - (<a
-              href="https://github.com/coryo12345/htmx-shared-canvas"
-              >GitHub repo</a
-            >) - A pixel-art canvas that is shared between all users. Open the
-            app in multiple tabs or browsers and all your changes will sync
-            across via websockets.
-          </li>
-          <li>
-            <a href="https://conway.corydio.com/">Conway's Game of Life</a> -
-            Conway's game of life built with React as an exercise in state
-            management. Click on tiles to toggle their state, then unpause/pause
-            the simulation to see what happens.
-          </li>
-          <li>
-            <a href="https://trivia.corydio.com">Trivia</a> - A simple & quick
-            app with trivia questions that are generated & rendered on the
-            server.
-          </li>
-          <li>
-            <a href="https://data.corydio.com/">Random Data Generator</a> - A
-            simple app that produces sets of configurable fake data. Data is
-            displayed in a table, and can be exported to CSV. This was built
-            with Vue.js, as a way to give me easy fake datasets when
-            expirimenting with databases.
-          </li>
-          <li>
-            <a href="https://rockpaperscissors.corydio.com/">
-              Rock Paper Scissors
-            </a>
-            - The classic game of rock paper scissors. The app will make a
-            random choice to go against you. This was made with Vue.js, with a
-            focus on pleasing animations instead of just stock UI components.
-          </li>
-        </ul>
+          </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-content">
+                <h3>Car API</h3>
+                <p>A public API for vehicle information built with Go, Astro & React</p>
+                <div class="project-links">
+                  <a href="https://github.com/coryo12345/carapi" target="_blank">GitHub</a>
+                  <a href="https://car.dioapi.com/" target="_blank">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-content">
+                <h3>Kanban Board</h3>
+                <p>Desktop app with custom drag & drop built with Wails</p>
+                <div class="project-links">
+                  <a href="https://github.com/coryo12345/ReactKanbanBoard" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-content">
+                <h3>Magic Canvas</h3>
+                <p>Real-time shared pixel art canvas with websockets</p>
+                <div class="project-links">
+                  <a href="https://canvas.corydio.com" target="_blank">Live Demo</a>
+                  <a href="https://github.com/coryo12345/htmx-shared-canvas" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </article>
     </main>
-    <footer>Updated 2025</footer>
+
+    <footer>
+      <div class="footer-content">
+        <p>© 2024 Cory DioGuardi</p>
+        <div class="social-links">
+          <a href="https://github.com/coryo12345" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:cory@corydio.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Intersection Observer for reveal animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal-text, .project-card').forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Parallax effect for hero section
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        document.querySelector('.hero-background').style.transform = 
+          `translateY(${scrolled * 0.5}px)`;
+      });
+    </script>
   </body>
 </html>
