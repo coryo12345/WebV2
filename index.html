@@ -23,7 +23,7 @@
   <body>
     <div class="noise"></div>
     <div class="gradient-overlay"></div>
-    
+
     <header class="titlebar">
       <a href="/" class="logo-link">
         <h1>CORY DIOGUARDI</h1>
@@ -62,22 +62,26 @@
           <div class="about-content">
             <div class="about-text">
               <p class="reveal-text">
-                Hi, I'm a software engineer who loves turning ideas into intuitive,
-                user-friendly web applications. Bringing a product to life—from
-                concept to polished experience—is what excites me most.
+                Hi, I'm a software engineer who loves turning ideas into
+                intuitive, user-friendly web applications. Bringing a product to
+                life—from concept to polished experience—is what excites me
+                most.
               </p>
               <p class="reveal-text">
-                I specialize in frontend development, crafting sleek and responsive
-                interfaces with TypeScript, Vue, and React. While UI/UX is my main
-                focus, I enjoy exploring the full stack to build seamless,
-                well-rounded applications.
+                I specialize in frontend development, crafting sleek and
+                responsive interfaces with TypeScript, Vue, and React. While
+                UI/UX is my main focus, I enjoy exploring the full stack to
+                build seamless, well-rounded applications.
               </p>
               <p class="reveal-text">
-                I graduated from Rochester Institute of Technology in May 2021 with
-                a B.S. in Computer Science. Always eager to learn and grow, I'm open
-                to new opportunities that push my skills and expand my horizons.
+                I graduated from Rochester Institute of Technology in May 2021
+                with a B.S. in Computer Science. Always eager to learn and grow,
+                I'm open to new opportunities that push my skills and expand my
+                horizons.
               </p>
-              <p class="reveal-text">Check out my projects and feel free to reach out!</p>
+              <p class="reveal-text">
+                Check out my projects and feel free to reach out!
+              </p>
             </div>
             <div class="tech-stack">
               <div class="tech-item">TypeScript</div>
@@ -97,11 +101,21 @@
               <span class="icon">✉️</span>
               <span>cory@corydio.com</span>
             </a>
-            <a href="https://github.com/coryo12345" class="contact-item" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/coryo12345"
+              class="contact-item"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span class="icon">🐙</span>
               <span>github.com/coryo12345</span>
             </a>
-            <a href="/Resume-Cory-DioGuardi.pdf" class="contact-item" target="_blank" rel="noopener noreferrer">
+            <a
+              href="/Resume-Cory-DioGuardi.pdf"
+              class="contact-item"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span class="icon">📄</span>
               <span>Resume</span>
             </a>
@@ -114,10 +128,20 @@
             <div class="project-card">
               <div class="project-content">
                 <h3>Car API</h3>
-                <p>A public API for vehicle information built with Go, Astro & React</p>
+                <p>
+                  A public API for vehicle information built with Go, Astro &
+                  React
+                </p>
                 <div class="project-links">
-                  <a href="https://github.com/coryo12345/carapi" target="_blank">GitHub</a>
-                  <a href="https://car.dioapi.com/" target="_blank">Live Demo</a>
+                  <a
+                    href="https://github.com/coryo12345/carapi"
+                    target="_blank"
+                  >
+                    GitHub
+                  </a>
+                  <a href="https://car.dioapi.com/" target="_blank">
+                    Live Demo
+                  </a>
                 </div>
               </div>
             </div>
@@ -126,7 +150,12 @@
                 <h3>Kanban Board</h3>
                 <p>Desktop app with custom drag & drop built with Wails</p>
                 <div class="project-links">
-                  <a href="https://github.com/coryo12345/ReactKanbanBoard" target="_blank">GitHub</a>
+                  <a
+                    href="https://github.com/coryo12345/ReactKanbanBoard"
+                    target="_blank"
+                  >
+                    GitHub
+                  </a>
                 </div>
               </div>
             </div>
@@ -135,8 +164,15 @@
                 <h3>Magic Canvas</h3>
                 <p>Real-time shared pixel art canvas with websockets</p>
                 <div class="project-links">
-                  <a href="https://canvas.corydio.com" target="_blank">Live Demo</a>
-                  <a href="https://github.com/coryo12345/htmx-shared-canvas" target="_blank">GitHub</a>
+                  <a
+                    href="https://github.com/coryo12345/htmx-shared-canvas"
+                    target="_blank"
+                  >
+                    GitHub
+                  </a>
+                  <a href="https://canvas.corydio.com" target="_blank">
+                    Live Demo
+                  </a>
                 </div>
               </div>
             </div>
@@ -147,9 +183,15 @@
 
     <footer>
       <div class="footer-content">
-        <p>© 2024 Cory DioGuardi</p>
+        <p>©<span id="year"></span> Cory DioGuardi</p>
         <div class="social-links">
-          <a href="https://github.com/coryo12345" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a
+            href="https://github.com/coryo12345"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
           <a href="mailto:cory@corydio.com">Email</a>
         </div>
       </div>
@@ -157,23 +199,32 @@
 
     <script>
       // Intersection Observer for reveal animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
 
-      document.querySelectorAll('.reveal-text, .project-card').forEach((el) => {
+      document.querySelectorAll(".reveal-text, .project-card").forEach((el) => {
         observer.observe(el);
       });
 
       // Parallax effect for hero section
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         const scrolled = window.pageYOffset;
-        document.querySelector('.hero-background').style.transform = 
-          `translateY(${scrolled * 0.5}px)`;
+        document.querySelector(
+          ".hero-background"
+        ).style.transform = `translateY(${scrolled * 0.5}px)`;
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const year = new Date().getFullYear();
+        document.getElementById("year").textContent = year;
       });
     </script>
   </body>
