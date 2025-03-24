@@ -12,6 +12,30 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable.ttf") format("truetype supports variations"),
+    url("/fonts/InterVariable.ttf") format("truetype-variations");
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterItalicVariable.ttf") format("truetype supports variations"),
+    url("/fonts/InterItalicVariable.ttf") format("truetype-variations");
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("/fonts/SpaceMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +45,7 @@
 body {
   background: var(--background);
   overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
   line-height: 1.6;
   position: relative;
@@ -46,7 +70,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 157, 0.1), transparent 50%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 255, 157, 0.1),
+    transparent 50%
+  );
   pointer-events: none;
   z-index: 1;
 }
@@ -79,7 +107,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .logo-glow {
@@ -89,7 +117,11 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, var(--primary-color) 0%, transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    var(--primary-color) 0%,
+    transparent 70%
+  );
   opacity: 0;
   transition: var(--transition);
   filter: blur(20px);
@@ -112,7 +144,7 @@ body {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -163,7 +195,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 255, 157, 0.1), rgba(255, 0, 255, 0.1));
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 157, 0.1),
+    rgba(255, 0, 255, 0.1)
+  );
 }
 
 .hero-content {
@@ -177,67 +213,76 @@ body {
   text-transform: uppercase;
   position: relative;
   text-shadow: 0.05em 0 0 var(--primary-color),
-              -0.05em -0.025em 0 var(--secondary-color),
-              0.025em 0.05em 0 var(--accent-color);
+    -0.05em -0.025em 0 var(--secondary-color),
+    0.025em 0.05em 0 var(--accent-color);
   animation: glitch 500ms infinite;
 }
 
 @keyframes glitch {
   0% {
     text-shadow: 0.05em 0 0 var(--primary-color),
-                -0.05em -0.025em 0 var(--secondary-color),
-                0.025em 0.05em 0 var(--accent-color);
+      -0.05em -0.025em 0 var(--secondary-color),
+      0.025em 0.05em 0 var(--accent-color);
   }
   14% {
     text-shadow: 0.05em 0 0 var(--primary-color),
-                -0.05em -0.025em 0 var(--secondary-color),
-                0.025em 0.05em 0 var(--accent-color);
+      -0.05em -0.025em 0 var(--secondary-color),
+      0.025em 0.05em 0 var(--accent-color);
   }
   15% {
     text-shadow: -0.05em -0.025em 0 var(--primary-color),
-                0.025em 0.025em 0 var(--secondary-color),
-                -0.05em -0.05em 0 var(--accent-color);
+      0.025em 0.025em 0 var(--secondary-color),
+      -0.05em -0.05em 0 var(--accent-color);
   }
   49% {
     text-shadow: -0.05em -0.025em 0 var(--primary-color),
-                0.025em 0.025em 0 var(--secondary-color),
-                -0.05em -0.05em 0 var(--accent-color);
+      0.025em 0.025em 0 var(--secondary-color),
+      -0.05em -0.05em 0 var(--accent-color);
   }
   50% {
     text-shadow: 0.025em 0.05em 0 var(--primary-color),
-                0.05em 0 0 var(--secondary-color),
-                0 -0.05em 0 var(--accent-color);
+      0.05em 0 0 var(--secondary-color), 0 -0.05em 0 var(--accent-color);
   }
   99% {
     text-shadow: 0.025em 0.05em 0 var(--primary-color),
-                0.05em 0 0 var(--secondary-color),
-                0 -0.05em 0 var(--accent-color);
+      0.05em 0 0 var(--secondary-color), 0 -0.05em 0 var(--accent-color);
   }
   100% {
     text-shadow: -0.025em 0 0 var(--primary-color),
-                -0.025em -0.025em 0 var(--secondary-color),
-                -0.025em -0.05em 0 var(--accent-color);
+      -0.025em -0.025em 0 var(--secondary-color),
+      -0.025em -0.05em 0 var(--accent-color);
   }
 }
 
 .typewriter {
+  display: inline-block;
   font-size: 1.5rem;
   color: var(--text-light);
-  margin-top: 1rem;
+  margin: 1rem auto 0 auto;
   overflow: hidden;
   border-right: 2px solid var(--primary-color);
   white-space: nowrap;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(20, end), blink-caret 0.75s step-end infinite;
+  font-family: "Space Mono", monospace;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 295.3px;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--primary-color) }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-color);
+  }
 }
 
 /* Scroll Indicator */
@@ -273,8 +318,14 @@ body {
 }
 
 @keyframes scroll {
-  0% { transform: translate(-50%, 0); opacity: 1; }
-  100% { transform: translate(-50%, 20px); opacity: 0; }
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 20px);
+    opacity: 0;
+  }
 }
 
 .arrow {
@@ -287,9 +338,17 @@ body {
 }
 
 @keyframes arrow {
-  0% { transform: rotate(45deg) translate(-5px, -5px); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: rotate(45deg) translate(20px, 20px); opacity: 0; }
+  0% {
+    transform: rotate(45deg) translate(-5px, -5px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) translate(20px, 20px);
+    opacity: 0;
+  }
 }
 
 /* Main Content */
@@ -316,14 +375,18 @@ body {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   border-radius: 3px;
 }
 
